@@ -9,6 +9,7 @@
         
         function slideOut(){
             $('.cpcta-flyin .cpcta-content-panel').slideToggle(400);
+            $('.cpcta-flyin').toggleClass('slidOut');
         }
         
         <?php if( get_option('cpcta-enable-autopop') && is_front_page() ) { ?>

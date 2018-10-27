@@ -39,11 +39,15 @@
 	}
 	.cpcta-close {    
         /* todo: only show when expanded */
+      display: none;
       position: absolute;
       top: 15%;
       right: 5%;
       width: 1.5rem;
       height: 1.5rem;
+    }
+    .slidOut .cpcta-close {
+        display: block;
     }
     .cpcta-close:hover::before, .cpcta-close:hover::after {
       /* todo: hover effect -- spin? */
