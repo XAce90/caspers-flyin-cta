@@ -38,20 +38,19 @@
         position: relative;
 	}
 	.cpcta-close {    
-        /* todo: only show when expanded */
       display: none;
       position: absolute;
       top: 15%;
-      right: 5%;
+      right: 2%;
       width: 1.5rem;
       height: 1.5rem;
+      transition: 0.3s;
     }
     .slidOut .cpcta-close {
-        display: block;
+      display: block;
     }
-    .cpcta-close:hover::before, .cpcta-close:hover::after {
-      /* todo: hover effect -- spin? */
-      background: #1ebcc5;
+    .cpcta-close:hover {
+      transform: rotate(90deg);
     }
     .cpcta-close::before, .cpcta-close::after {
       content: '';
@@ -59,6 +58,7 @@
       height: 2px;
       width: 100%;
       top: 50%;
+      right: 0;
       background: <?php echo get_option('cpcta-top-bar-font-color') ?>;
     }
     .cpcta-close::before {
@@ -81,8 +81,6 @@
 		background: <?php echo get_option('cpcta-body-content-bkg-color'); ?>;
 		padding: 10px 20px 30px 20px;
 		box-sizing: border-box;
-		/* text-align: center; */
-/*		border-top: 1px solid #C26507;*/
 	}
     .cpcta-flyin > .cpcta-content-panel {
         overflow: auto;
