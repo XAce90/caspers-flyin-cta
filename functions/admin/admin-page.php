@@ -101,7 +101,8 @@ function caspers_flyin_cta_admin_page() { //structures the admin page ?>
 					<td><input type="color" name="cpcta-body-content-bkg-color" value="<?php echo $cpcta_body_bkg_color; ?>" style="width: 25%;"/></td>
                 </tr>
                 
-                <tr>
+                <!--<tr>
+                    //As of version 1.5, this field is not being used.
 					<th scope="row">Close Button Color</th>
 					<?php 
 						if(get_option('cpcta-close-btn-color')){
@@ -111,7 +112,7 @@ function caspers_flyin_cta_admin_page() { //structures the admin page ?>
 						}
 					?>
 					<td><input type="color" name="cpcta-close-btn-color" value="<?php echo $cpcta_close_btn_color; ?>" style="width: 25%;"/></td>
-                </tr>
+                </tr>-->
                 
                 <!------------------------->
                 <!-- auto popup controls -->

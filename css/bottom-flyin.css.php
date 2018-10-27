@@ -25,35 +25,52 @@
 		min-width: 300px;
 		z-index: <?php echo get_option('cpcta-zindex'); ?>
 	}
-	.cpcta-flyin .cpcta-top-bar{
+	.cpcta-top-bar{
 		color: <?php echo get_option('cpcta-top-bar-font-color'); ?>;
 		background: <?php echo get_option('cpcta-top-bar-bkg-color'); ?>;
 		text-align: center;
 		<?php if($position != 'left') {echo "border-top-left-radius: 5px;"; } ?>
 		<?php if($position != 'right') {echo "border-top-right-radius: 5px;"; } ?>
-		padding: 8px 0 8px 0;
-		font-size: 16px;
+		padding: 0.5rem 0;
+		font-size: 1rem;
 		font-weight: bold;
 		cursor: pointer;
+        position: relative;
 	}
-	.cpcta-flyin .cpcta-top-bar .up{
-		color: #E88C38;
-		padding: 0 10px;
-		font-weight: bold;
-		font-size: 18px;
-	}
-	.cpcta-flyin .cpcta-content-panel .cpcta-close{
-		color: <?php echo get_option('cpcta-top-bar-font-color'); ?>;
-		background: <?php echo get_option('cpcta-close-btn-color'); ?>;
-		padding: 0 7px;
-		position: absolute;
-		top: 5px;
-		right: 10px;
-		font-size: 11px;
-		border-radius: 50%;
-/*		border: 1px solid #B05402;*/
-		cursor: pointer;
-	}
+	.cpcta-close {    
+        /* todo: only show when expanded */
+      position: absolute;
+      top: 15%;
+      right: 5%;
+      width: 1.5rem;
+      height: 1.5rem;
+    }
+    .cpcta-close:hover::before, .cpcta-close:hover::after {
+      /* todo: hover effect -- spin? */
+      background: #1ebcc5;
+    }
+    .cpcta-close::before, .cpcta-close::after {
+      content: '';
+      position: absolute;
+      height: 2px;
+      width: 100%;
+      top: 50%;
+      background: <?php echo get_option('cpcta-top-bar-font-color') ?>;
+    }
+    .cpcta-close::before {
+      -webkit-transform: rotate(45deg);
+      -moz-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      -o-transform: rotate(45deg);
+      transform: rotate(45deg);
+    }
+    .cpcta-close::after {
+      -webkit-transform: rotate(-45deg);
+      -moz-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+      -o-transform: rotate(-45deg);
+      transform: rotate(-45deg);
+    }
 	.cpcta-flyin .cpcta-content-panel{
 		display: none;
 		color: <?php echo get_option('cpcta-body-content-font-color'); ?>;

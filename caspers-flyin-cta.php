@@ -86,9 +86,11 @@ require_once( plugin_dir_path( __FILE__ ) . 'functions/admin/admin-page.php' );
 		}
 	?>     
 	<div class="cpcta-flyin">
-        <div class="cpcta-top-bar"><?php echo get_option('cpcta-top-bar-text') ?></div>
+        <div class="cpcta-top-bar">
+            <?php echo get_option('cpcta-top-bar-text') ?>
+            <?php if(get_option('cpcta-slider-type') == 'vertical') { echo '<span class="cpcta-close" aria-title="close"></span>'; } ?>
+        </div>
         <div class="cpcta-content-panel">
-            <span class="cpcta-close">X</span>
             <?php echo do_shortcode( get_option('cpcta-slider-body-content') ); ?>
 	    </div>
 	</div>

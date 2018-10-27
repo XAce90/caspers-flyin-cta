@@ -66,21 +66,6 @@ if(get_option('cpcta-zindex')) {
 		font-weight: bold;
 		font-size: 18px;
 	}
-	.cpcta-flyin .cpcta-content-panel .cpcta-close{
-		color: <?php echo get_option('cpcta-top-bar-font-color'); ?>;
-		background: <?php echo get_option('cpcta-close-btn-color'); ?>;
-		padding: 0 7px;
-		position: absolute;
-		top: 5px;
-		<?php if( $position == 'right' ) : ?>
-			right: 10px;
-		<?php elseif( $position == 'left' ) : ?>
-			left: 10px;
-		<?php endif; ?>
-		font-size: 11px;
-		border-radius: 50%;
-		cursor: pointer;
-	}
 	.cpcta-flyin .cpcta-content-panel {
 		position: fixed;
 		z-index: <?php echo $zindex; ?>;
