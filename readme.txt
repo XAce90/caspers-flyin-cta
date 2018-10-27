@@ -39,11 +39,16 @@ Don't let your visitors miss out on great deals or important announcements again
 
 = Why should I use your plugin? =
 
+TODO REMOVE IRONISTIC REFERENCES
 I work closely with the marketing department at Ironistic who are frequently requesting some call to action like the ones presented in this plugin. This was written primarily to make it easier on my team to deploy and, as such, will constantly and continually be improved by their recommendations. So you know not only will it continue to be supported with lots of new features down the road, it will also be reviewed and improved by professional marketers (and not just some ratty developer). 
+
+= Are you ready for Gutenberg? =
+
+TODO ANSWER
 
 = How should I contact you if I find a bug? =
 
-You can find me on Twitter at @SirCaseyJames.
+You can find me on Twitter at @SirCaseyJames. TODO: Or use the support forums
 
 == Screenshots ==
 
@@ -55,6 +60,16 @@ You can find me on Twitter at @SirCaseyJames.
 6. As shown here, there are several powerful settings. Not only can you control where on your page the CTA sits, you can determine which pages to have the item show up on. You also get a full WYSIWYG editor where you can add media and forms. You also have the option to turn it on and off without having to deactive and reactivate the plugin. 
 
 == Changelog ==
+
+= 1.5 =
+* Tested with Gutenberg, the new wordpress editor, ensuring you can continue to use this plugin in future versions.
+* Improved the X icon which appeared in the circle at the top right of the expanded view.
+    * The clunky icon background has been removed
+    * The color of the icon will continue to match the top bar's font color
+    * The option to choose the icon's background color has also been removed from the admin, since there is no longer a background
+    * The icon has been replaced with a more elegent and larger CSS icon
+    * For tabs on the side of the screen (as opposed to bottom-positioned tabs), the icon has been removed entirely for two reasons: 1) it would occasionally overlap content, making that content unreadable, and 2) the tab already updates to say 'Close'
+* Updated author information and plugin meta data
 
 = 1.4.1 =
 * Fixed bug where horizontal flyout from the left was not smoothly transitioning
