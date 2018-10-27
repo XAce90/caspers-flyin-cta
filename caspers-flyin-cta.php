@@ -1,11 +1,11 @@
 <?php 
 /*
  Plugin Name: Casper's Flyin' Call-to-Action
- Plugin URI: https://www.ironistic.com
+ Plugin URI: https://wordpress.org/plugins/caspers-fly-in-cta/
  Description: Lightweight, highly customizable call-to-action plugin. Go to Appearance -> Fly-in CTA to manage.
  Version: 1.4.1
- Author: Casey James Perno @ Ironistic
- Author URI: https://www.ironistic.com/team/casey-james-perno/
+ Author: Casey James Perno
+ Author URI: https://www.caseyjamesperno.com
  License: GPL2
 */
 
