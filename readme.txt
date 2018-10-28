@@ -44,11 +44,11 @@ I work closely with the marketing department at Ironistic who are frequently req
 
 = Are you ready for Gutenberg? =
 
-TODO ANSWER
+This plugin has been tested with Gutenberg, the new Wordpress editor, and works seemlessly in WordPress environments that include it. The editor in the plugin's admin page, where you write the body of your message, for now still uses the classic WYSIWYG.
 
 = How should I contact you if I find a bug? =
 
-You can find me on Twitter at @SirCaseyJames. TODO: Or use the support forums
+Check out the plugin's [support forums](https://wordpress.org/support/plugin/caspers-fly-in-cta), or you can find me on Twitter at @SirCaseyJames.
 
 == Screenshots ==
 
