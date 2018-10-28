@@ -39,14 +39,13 @@ Don't let your visitors miss out on great deals or important announcements again
 
 = Why should I use your plugin? =
 
-TODO REMOVE IRONISTIC REFERENCES
-I work closely with the marketing department at Ironistic who are frequently requesting some call to action like the ones presented in this plugin. This was written primarily to make it easier on my team to deploy and, as such, will constantly and continually be improved by their recommendations. So you know not only will it continue to be supported with lots of new features down the road, it will also be reviewed and improved by professional marketers (and not just some ratty developer). 
+This plugin was designed with marketing and project management teams in mind. It's easy to implement, easy to update, and easy to customize, and all designed to help you increase conversions. I spent three years working closely with marketing and sales specialists, as well as directly with website owners, and time and time again I got a request to implement this exact functionality. So, I did what any sane developer would do: I turned it into a plugin and shared it with the community. While I am no longer with the marketing agency where this plugin was inspired and developed, the love and support this plugin has found inspires me to continue improving it with new and better features. 
 
 = Are you ready for Gutenberg? =
 
 This plugin has been tested with Gutenberg, the new Wordpress editor, and works seemlessly in WordPress environments that include it. The editor in the plugin's admin page, where you write the body of your message, for now still uses the classic WYSIWYG.
 
-= How should I contact you if I find a bug? =
+= How should I contact you if I find a bug or have a feature request? =
 
 Check out the plugin's [support forums](https://wordpress.org/support/plugin/caspers-fly-in-cta), or you can find me on Twitter at @SirCaseyJames.
 
