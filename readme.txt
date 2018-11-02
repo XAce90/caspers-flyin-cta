@@ -2,7 +2,7 @@
 Contributors: XAce90
 Tags: call to action, cta, easy, simple, popup, popover, sticky, tab, bar, slide out, button, feedback, review, slick, fly, widget
 Requires at least: 4.0
-Tested up to: 4.9.8
+Tested up to: 5.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Donate link: https://www.paypal.me/xace90
@@ -60,9 +60,12 @@ Check out the plugin's [support forums](https://wordpress.org/support/plugin/cas
 
 == Changelog ==
 
+= 1.5.1 =
+* Fixed issue where the text in the topbar of the bottom flyin was too small on some themes
+
 = 1.5 =
-* Tested with Gutenberg, the new wordpress editor, ensuring you can continue to use this plugin in future versions.
-* Improved the X icon which appeared in the circle at the top right of the expanded view.
+* Tested with Gutenberg, the new wordpress editor, ensuring you can continue to use this plugin in future versions
+* Improved the X icon which appeared in the circle at the top right of the expanded view
     * The clunky icon background has been removed
     * The color of the icon will continue to match the top bar's font color
     * The option to choose the icon's background color has also been removed from the admin, since there is no longer a background
