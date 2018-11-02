@@ -61,7 +61,10 @@ Check out the plugin's [support forums](https://wordpress.org/support/plugin/cas
 == Changelog ==
 
 = 1.5.1 =
-* Fixed issue where the text in the topbar of the bottom flyin was too small on some themes
+* Fixed issue where the text and the close icon in the topbar of the bottom flyin was too small on some themes
+* Returned the 'Close' icon to the side flyin on mobile screens. Otherwise users were trapped, without a way to close.
+* Improved the look and feel of the close icon in the side flyin
+
 
 = 1.5 =
 * Tested with Gutenberg, the new wordpress editor, ensuring you can continue to use this plugin in future versions
