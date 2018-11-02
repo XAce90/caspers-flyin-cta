@@ -32,7 +32,7 @@
 		<?php if($position != 'left') {echo "border-top-left-radius: 5px;"; } ?>
 		<?php if($position != 'right') {echo "border-top-right-radius: 5px;"; } ?>
 		padding: 0.5rem 0;
-		font-size: 1rem;
+		font-size: 16px;
 		font-weight: bold;
 		cursor: pointer;
         position: relative;
