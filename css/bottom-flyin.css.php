@@ -42,8 +42,8 @@
       position: absolute;
       top: 15%;
       right: 2%;
-      width: 1.5rem;
-      height: 1.5rem;
+      width: 24px;
+      height: 24px;
       transition: 0.3s;
     }
     .slidOut .cpcta-close {

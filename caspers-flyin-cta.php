@@ -91,6 +91,7 @@ require_once( plugin_dir_path( __FILE__ ) . 'functions/admin/admin-page.php' );
             <?php if(get_option('cpcta-slider-type') == 'vertical') { echo '<span class="cpcta-close" aria-title="close"></span>'; } ?>
         </div>
         <div class="cpcta-content-panel">
+            <?php if(get_option('cpcta-slider-type') == 'horizontal') { echo '<span class="cpcta-close" aria-title="close"></span>'; } ?>
             <?php echo do_shortcode( get_option('cpcta-slider-body-content') ); ?>
 	    </div>
 	</div>

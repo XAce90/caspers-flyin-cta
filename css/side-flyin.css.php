@@ -66,6 +66,44 @@ if(get_option('cpcta-zindex')) {
 		font-weight: bold;
 		font-size: 18px;
 	}
+    .cpcta-close {    
+      
+    }
+    @media screen and (max-width: 480px){
+      .cpcta-close {
+        position: relative;
+        float: right;
+        transition: 0.3s;
+        width: 28px;
+        height: 28px;
+      }
+      .cpcta-close:hover {
+          transform: rotate(90deg);
+      }
+      .cpcta-close::before, .cpcta-close::after {
+          content: '';
+          position: absolute;
+          height: 2px;
+          width: 100%;
+          top: 50%;
+          right: 0;
+          background: <?php echo get_option('cpcta-top-bar-bkg-color') ?>;
+      }
+      .cpcta-close::before {
+          -webkit-transform: rotate(45deg);
+          -moz-transform: rotate(45deg);
+          -ms-transform: rotate(45deg);
+          -o-transform: rotate(45deg);
+          transform: rotate(45deg);
+      }
+      .cpcta-close::after {
+          -webkit-transform: rotate(-45deg);
+          -moz-transform: rotate(-45deg);
+          -ms-transform: rotate(-45deg);
+          -o-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+        }
+    }
 	.cpcta-flyin .cpcta-content-panel {
 		position: fixed;
 		z-index: <?php echo $zindex; ?>;
