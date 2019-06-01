@@ -60,6 +60,9 @@ Check out the plugin's [support forums](https://wordpress.org/support/plugin/cas
 
 == Changelog ==
 
+= 1.5.2 =
+* Fixed issue where certain characters in the side tab would break the JavaScript, preventing the body from sliding out.
+
 = 1.5.1 =
 * Fixed issue where the text and the close icon in the topbar of the bottom flyin was too small on some themes
 * Returned the 'Close' icon to the side flyin on mobile screens. Otherwise users were trapped, without a way to close.
