@@ -3,7 +3,7 @@ jQuery( document ).ready(function( $ ) {
 
 //change cpcta-top-bar content on click
 	//gets base cpcta-top-bar content
-	var CTA = '<?php echo get_option('cpcta-top-bar-text'); ?>';
+	var CTA = '<?php echo addslashes(get_option('cpcta-top-bar-text')); ?>';
 			
 	function slideOut(){
 		//toggle's content in/out by adding or removing slidOut
