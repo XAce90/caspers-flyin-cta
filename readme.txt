@@ -1,4 +1,4 @@
-=== Plugin Name ===
+=== Casper's Flyin' Call-to-Action ===
 Contributors: XAce90
 Tags: call to action, cta, easy, simple, popup, popover, sticky, tab, bar, slide out, button, feedback, review, slick, fly, widget
 Requires at least: 4.0
