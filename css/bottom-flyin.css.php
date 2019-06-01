@@ -32,7 +32,7 @@
 		<?php if($position != 'left') {echo "border-top-left-radius: 5px;"; } ?>
 		<?php if($position != 'right') {echo "border-top-right-radius: 5px;"; } ?>
 		padding: 0.5rem 0;
-		font-size: 1rem;
+		font-size: 16px;
 		font-weight: bold;
 		cursor: pointer;
         position: relative;
@@ -42,8 +42,8 @@
       position: absolute;
       top: 15%;
       right: 2%;
-      width: 1.5rem;
-      height: 1.5rem;
+      width: 24px;
+      height: 24px;
       transition: 0.3s;
     }
     .slidOut .cpcta-close {
