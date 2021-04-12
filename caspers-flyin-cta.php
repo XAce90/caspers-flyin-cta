@@ -79,21 +79,25 @@ require_once( plugin_dir_path( __FILE__ ) . 'functions/admin/admin-page.php' );
 	function cpcta_display_slider() {
 		if( get_option('cpcta-slider-type') == 'vertical' ) {
 			include('css/bottom-flyin.css.php');
-			include('js/bottom-flyin.js.php');
 		} else if( get_option('cpcta-slider-type') == 'horizontal' ) {
 			include('css/side-flyin.css.php');
 			include('js/side-flyin.js.php');	
 		}
-	?>     
-	<div class="cpcta-flyin">
-        <div class="cpcta-top-bar">
-            <?php echo get_option('cpcta-top-bar-text') ?>
-            <?php if(get_option('cpcta-slider-type') == 'vertical') { echo '<span class="cpcta-close" aria-title="close"></span>'; } ?>
-        </div>
-        <div class="cpcta-content-panel">
-            <?php if(get_option('cpcta-slider-type') == 'horizontal') { echo '<span class="cpcta-close" aria-title="close"></span>'; } ?>
-            <?php echo do_shortcode( get_option('cpcta-slider-body-content') ); ?>
-	    </div>
+	?>
+	<div 
+		class="cpcta-flyin"
+		<?php if(get_option('cpcta-enable-autopop') && is_front_page()) {
+			echo 'data-autopop-timer='.get_option('cpcta-autopop-timer').'';
+		}?>
+	>
+		<div class="cpcta-top-bar">
+			<?php echo get_option('cpcta-top-bar-text') ?>
+			<?php if(get_option('cpcta-slider-type') == 'vertical') { echo '<span class="cpcta-close" aria-title="close"></span>'; } ?>
+		</div>
+		<div class="cpcta-content-panel">
+			<?php if(get_option('cpcta-slider-type') == 'horizontal') { echo '<span class="cpcta-close" aria-title="close"></span>'; } ?>
+			<?php echo do_shortcode( get_option('cpcta-slider-body-content') ); ?>
+	</div>
 	</div>
     <?php
 	} //end cpcta_display_slider();
