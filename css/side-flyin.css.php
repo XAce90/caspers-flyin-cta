@@ -7,29 +7,47 @@
  
 $position = get_option('cpcta-hori-slider-position');
 $angle = get_option('cpcta-hori-slider-topbar-angle');
-if(get_option('cpcta-zindex')) {
-	$zindex = get_option('cpcta-zindex');
-} else {
-	$zindex = 999999;
-}
 ?>
 <style>
 	.cpcta-flyin *  { transition: 1s; }
 	.cpcta-flyin {
 		min-width: 300px;
 		max-height: 100%;
-		z-index: <?php echo $zindex; ?>;
 	}
+
+	.cpcta-flyin.cpcta-offScreenLeft .cpcta-top-bar {
+		left: 0;
+	}
+
+	.cpcta-flyin.cpcta-offScreenLeft.slidOut .cpcta-top-bar {
+		left: 400px;
+	}
+
+	.cpcta-flyin.cpcta-offScreenLeft.slidOut .cpcta-content-panel {
+		left: 0;
+	}
+	
+	.cpcta-flyin.cpcta-offScreenRight .cpcta-top-bar {
+		right: 0;
+	}
+
+	.cpcta-flyin.cpcta-offScreenRight.slidOut .cpcta-top-bar {
+		right: 400px;
+	}
+
+	.cpcta-flyin.cpcta-offScreenRight.slidOut .cpcta-content-panel {
+		right: 0;
+	}
+
 	.cpcta-flyin .cpcta-top-bar {
 		position: fixed;
-		z-index: <?php echo $zindex; ?>;
 		top: 150px;
 		<?php if($position == 'right' && $angle == 'vertical') : ?>
-			right: 0;
+			/* right: 0; */
 			border-top-left-radius: 5px;
 			border-bottom-left-radius: 5px;
 		<?php elseif( $position == 'left' && $angle == 'vertical') : ?>
-			left: 0;
+			/* left: 0; */
 			border-top-right-radius: 5px;
 			border-bottom-right-radius: 5px;
 		<?php elseif( $position == 'right' && $angle == 'horizontal' ) : ?>
@@ -106,7 +124,6 @@ if(get_option('cpcta-zindex')) {
     }
 	.cpcta-flyin .cpcta-content-panel {
 		position: fixed;
-		z-index: <?php echo $zindex; ?>;
 		<?php if( $position == 'right' ) : ?>
 			right: -400px;
 		<?php elseif ( $position == 'left' ) : ?>

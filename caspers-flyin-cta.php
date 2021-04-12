@@ -81,14 +81,26 @@ require_once( plugin_dir_path( __FILE__ ) . 'functions/admin/admin-page.php' );
 			include('css/bottom-flyin.css.php');
 		} else if( get_option('cpcta-slider-type') == 'horizontal' ) {
 			include('css/side-flyin.css.php');
-			include('js/side-flyin.js.php');	
+			// include('js/side-flyin.js.php');
 		}
+
+		$cpcta_flyin_classes = array('cpcta-flyin');
+		if( get_option('cpcta-slider-type') == 'horizontal' ) {
+			if( get_option('cpcta-hori-slider-position') == 'right' ) {
+				array_push($cpcta_flyin_classes, "cpcta-offScreenRight");
+			} else {
+				array_push($cpcta_flyin_classes, "cpcta-offScreenLeft");
+			}
+		}
+
+		$cpcta_zindex = get_option('cpcta-zindex') ? get_option('cpcta-zindex') : 999999;
 	?>
 	<div 
-		class="cpcta-flyin"
+		class="<?php echo implode($cpcta_flyin_classes, " ") ?>"
 		<?php if(get_option('cpcta-enable-autopop') && is_front_page()) {
 			echo 'data-autopop-timer='.get_option('cpcta-autopop-timer').'';
 		}?>
+		style="z-index: <?php echo $cpcta_zindex ?>"
 	>
 		<div class="cpcta-top-bar">
 			<?php echo get_option('cpcta-top-bar-text') ?>
