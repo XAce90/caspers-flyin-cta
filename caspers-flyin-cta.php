@@ -102,7 +102,7 @@ require_once( plugin_dir_path( __FILE__ ) . 'functions/admin/admin-page.php' );
 		}?>
 		style="z-index: <?php echo $cpcta_zindex ?>"
 	>
-		<div class="cpcta-top-bar">
+		<div class="cpcta-top-bar" data-text="<?php echo get_option('cpcta-top-bar-text') ?>">
 			<?php echo get_option('cpcta-top-bar-text') ?>
 			<?php if(get_option('cpcta-slider-type') == 'vertical') { echo '<span class="cpcta-close" aria-title="close"></span>'; } ?>
 		</div>
