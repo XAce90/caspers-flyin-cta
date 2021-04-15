@@ -13,6 +13,7 @@ $angle = get_option('cpcta-hori-slider-topbar-angle');
 	.cpcta-flyin {
 		min-width: 300px;
 		max-height: 100%;
+		position: relative;
 	}
 
 	.cpcta-flyin.cpcta-offScreenLeft .cpcta-top-bar {
