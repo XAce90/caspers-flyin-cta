@@ -3,7 +3,7 @@
  Plugin Name: Casper's Flyin' Call-to-Action
  Plugin URI: https://wordpress.org/plugins/caspers-fly-in-cta/
  Description: Lightweight, highly customizable call-to-action plugin. Go to Appearance -> Fly-in CTA to manage.
- Version: 1.5.2
+ Version: 2.0
  Author: Casey James Perno
  Author URI: https://www.caseyjamesperno.com
  License: GPL2
@@ -81,7 +81,6 @@ require_once( plugin_dir_path( __FILE__ ) . 'functions/admin/admin-page.php' );
 			include('css/bottom-flyin.css.php');
 		} else if( get_option('cpcta-slider-type') == 'horizontal' ) {
 			include('css/side-flyin.css.php');
-			// include('js/side-flyin.js.php');
 		}
 
 		$cpcta_flyin_classes = array('cpcta-flyin');

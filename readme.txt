@@ -2,7 +2,7 @@
 Contributors: XAce90
 Tags: call to action, cta, easy, simple, popup, popover, sticky, tab, bar, slide out, button, feedback, review, slick, fly, widget
 Requires at least: 4.0
-Tested up to: 5.0
+Tested up to: 5.7.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Donate link: https://www.paypal.me/xace90
@@ -43,11 +43,24 @@ This plugin was designed with marketing and project management teams in mind. It
 
 = Are you ready for Gutenberg? =
 
-This plugin has been tested with Gutenberg, the new Wordpress editor, and works seemlessly in WordPress environments that include it. The editor in the plugin's admin page, where you write the body of your message, for now still uses the classic WYSIWYG.
+This plugin has been tested with Gutenberg, the new Wordpress editor, and works seamlessly in WordPress environments that include it. The editor in the plugin's admin page, where you write the body of your message, for now still uses the classic WYSIWYG.
 
 = How should I contact you if I find a bug or have a feature request? =
 
-Check out the plugin's [support forums](https://wordpress.org/support/plugin/caspers-fly-in-cta), or you can find me on Twitter at @SirCaseyJames.
+Check out the plugin's [support forums](https://wordpress.org/support/plugin/caspers-fly-in-cta).
+
+= How can I change the tab that says 'Close'? =
+
+Unfortunately this plugin is not yet translatable, and in a major oversight, I hardcoded 'Close' in the JavaScript files. In a future version, I will rectify this, but in the meantime, here are the steps you can take to fix it yourself:
+
+1. Through the WordPress admin, go to Plugins -> Plugin Editor.
+1. In the top right corner, select Casper's Flyin' Call-to-Action from the dropdown.
+1. In the list of plugin files to the right, go to js -> side-flyin.js.
+1. Around line 18, you should see a line like this: `if(!isMobile) $topbar.innerText = 'Close';`.
+1. Update 'Close' to whatever you want.
+1. Save!
+
+One thing to note: Any time you update this plugin, this change will be overridden. Hopefully the next update will fix this oversight though!
 
 == Screenshots ==
 
@@ -59,6 +72,11 @@ Check out the plugin's [support forums](https://wordpress.org/support/plugin/cas
 6. As shown here, there are several powerful settings. Not only can you control where on your page the CTA sits, you can determine which pages to have the item show up on. You also get a full WYSIWYG editor where you can add media and forms. You also have the option to turn it on and off without having to deactive and reactivate the plugin. 
 
 == Changelog ==
+
+= 2.0 =
+* Reworked the JavaScript code
+    * Removed dependency on jQuery 
+    * Moved JavaScript files to be static instead of PHP generated
 
 = 1.5.2 =
 * Fixed issue where certain characters in the side tab would break the JavaScript, preventing the body from sliding out.
