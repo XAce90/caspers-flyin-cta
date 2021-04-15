@@ -19,10 +19,6 @@ $angle = get_option('cpcta-hori-slider-topbar-angle');
 		left: 0;
 	}
 
-	.cpcta-flyin.cpcta-offScreenLeft.slidOut .cpcta-top-bar {
-		left: 400px;
-	}
-
 	.cpcta-flyin.cpcta-offScreenLeft.slidOut .cpcta-content-panel {
 		left: 0;
 	}
@@ -31,8 +27,15 @@ $angle = get_option('cpcta-hori-slider-topbar-angle');
 		right: 0;
 	}
 
-	.cpcta-flyin.cpcta-offScreenRight.slidOut .cpcta-top-bar {
-		right: 400px;
+	@media screen and (min-width: 480px) {
+		/* on mobile screens, the tab should not slide out */
+		.cpcta-flyin.cpcta-offScreenRight.slidOut .cpcta-top-bar {
+			right: 400px;
+		}
+
+		.cpcta-flyin.cpcta-offScreenLeft.slidOut .cpcta-top-bar {
+			left: 400px;
+		}
 	}
 
 	.cpcta-flyin.cpcta-offScreenRight.slidOut .cpcta-content-panel {
