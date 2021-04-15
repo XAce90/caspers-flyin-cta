@@ -25,19 +25,24 @@ document.addEventListener('DOMContentLoaded', () => {
    * 1. When a user clicks on the tab (i.e. top-bar), reveal/hide the content window.
    * 2. When a user clicks on the "close" button, hide the content window
    */ 
-  document.querySelector('.cpcta-top-bar').addEventListener('click', slideWindow);
-  document.querySelector('.cpcta-close').addEventListener('click', slideWindow);
-
+  
   // auto-pop out cta window
-  const autopopTimer = document.querySelector('.cpcta-flyin').dataset.autopopTimer;
-  if(autopopTimer) {
-    setTimeout(slideWindow, parseInt(autopopTimer));
+  const autopopTime = document.querySelector('.cpcta-flyin').dataset.autopopTimer;
+  let autopopCountdown;
+  if(autopopTime) {
+    autopopCountdown = setTimeout(slideWindow, parseInt(autopopTime));
   }
 
+  document.querySelector('.cpcta-top-bar').addEventListener('click', () => {
+    slideWindow();
+    if(autopopCountdown) clearTimeout(autopopCountdown);
+  });
+  document.querySelector('.cpcta-close').addEventListener('click', slideWindow);
+
   // compensate for logged in admin bar
-  const wpadminbar = document.querySelector('#wpadminbar');
-  if(wpadminbar) {
-    const offset = wpadminbar.offsetHeight;
+  const $wpadminbar = document.querySelector('#wpadminbar');
+  if($wpadminbar) {
+    const offset = $wpadminbar.offsetHeight;
     const newHeight = window.innerHeight - offset;
     document.querySelector('.cpcta-content-panel').style.marginTop = `${offset}px`;
     document.querySelector('.cpcta-content-panel').style.height = `${newHeight}px`;

@@ -71,19 +71,26 @@ const slideWindow = () => {
   document.querySelector('.cpcta-flyin').classList.toggle('slidOut');
 }
 
-document.addEventListener('DOMContentLoaded', () => {    
+document.addEventListener('DOMContentLoaded', () => {   
+  /**
+   * Once the content finishes loading, attach the following event listeners.
+   * 1. When a user clicks on the tab (i.e. top-bar), reveal/hide the content window.
+   * 2. When a user clicks on the "close" button, hide the content window
+   */ 
+
+  // auto-pop out cta window
+  const autopopTime = document.querySelector('.cpcta-flyin').dataset.autopopTimer;
+  let autopopCountdown;
+  if(autopopTime) {
+    autopopCountdown = setTimeout(slideWindow, parseInt(autopopTime));
+  }
+
   document.querySelector('.cpcta-top-bar').addEventListener('click', () => {
     slideWindow();
+    if(autopopCountdown) clearTimeout(autopopCountdown);
   });
+  document.querySelector('.cpcta-close').addEventListener('click', slideWindow);
 
-  document.querySelector('.cpcta-close').addEventListener('click', () => {
-    slideWindow();
-  });
-
-  const autopopTimer = document.querySelector('.cpcta-flyin').dataset.autopopTimer;
-  if(autopopTimer) {
-    setTimeout(slideWindow, parseInt(autopopTimer));
-  }
 
   // set max-height based on size of window
   const windowHeight = window.innerHeight;
